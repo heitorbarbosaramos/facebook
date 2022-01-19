@@ -6,9 +6,14 @@ import 'package:interface_facebook/dados/dados.dart';
 import 'package:interface_facebook/uteis/paleta_cores.dart';
 import 'package:line_icons/line_icons.dart';
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
+  @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,3 +28,4 @@ class Home extends StatelessWidget {
     );
   }
 }
+
