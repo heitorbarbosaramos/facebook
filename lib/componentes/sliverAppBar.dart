@@ -4,9 +4,14 @@ import 'package:line_icons/line_icons.dart';
 
 import 'botao_circulo.dart';
 
-class SliverAppBarPersonalizado extends StatelessWidget {
+class SliverAppBarPersonalizado extends StatefulWidget {
   const SliverAppBarPersonalizado({Key? key}) : super(key: key);
 
+  @override
+  _SliverAppBarPersonalizadoState createState() => _SliverAppBarPersonalizadoState();
+}
+
+class _SliverAppBarPersonalizadoState extends State<SliverAppBarPersonalizado> {
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
@@ -28,3 +33,4 @@ class SliverAppBarPersonalizado extends StatelessWidget {
     );
   }
 }
+
