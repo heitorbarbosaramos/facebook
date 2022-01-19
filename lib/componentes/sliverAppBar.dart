@@ -32,7 +32,7 @@ class _SliverAppBarPersonalizadoState extends State<SliverAppBarPersonalizado> {
       ),
       actions: [
         Row(children: [
-          Icon(AppController.instance.isDartTheme? Icons.lightbulb_outline : Icons.tungsten, color: Colors.black, size: 30,),
+          Icon(AppController.instance.isDartTheme? Icons.lightbulb_outline : Icons.tungsten_outlined, color: AppController.instance.isDartTheme ?  Colors.white : Colors.black, size: 36,),
           Switch(value: AppController.instance.isDartTheme, onChanged: (value){
             setState(() {
               //isDartTheme = value;
