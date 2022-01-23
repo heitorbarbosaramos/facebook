@@ -22,8 +22,8 @@ class _ControleTemaDarkLightState extends State<ControleTemaDarkLight> {
         });
         AppController.instance.alteraLightDartTema();
       }),
-      BotaoCirculo(icone: LineIcons.search, tamanhoIcone: 30, onPressed: (){},),
-      BotaoCirculo(icone: LineIcons.facebookMessenger, tamanhoIcone: 30, onPressed: (){},),
+      BotaoCirculo(icone: LineIcons.search, tamanhoIcone: 25, onPressed: (){},),
+      BotaoCirculo(icone: LineIcons.facebookMessenger, tamanhoIcone: 25, onPressed: (){},),
     ],
     );
   }

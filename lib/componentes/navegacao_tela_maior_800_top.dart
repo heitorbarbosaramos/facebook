@@ -1,7 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:interface_facebook/componentes/bottom_navigator_bar.dart';
-import 'package:interface_facebook/componentes/controle_tema_dark_light.dart';
 import 'package:interface_facebook/componentes/lista_menu.dart';
 import 'package:interface_facebook/componentes/marca_texto.dart';
 import 'package:interface_facebook/dados/dados.dart';

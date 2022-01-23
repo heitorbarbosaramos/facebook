@@ -15,7 +15,7 @@ class BotaoCirculo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(6),
+      margin: EdgeInsets.all(4),
       decoration: BoxDecoration(
           color: Colors.grey[200],
           shape: BoxShape.circle

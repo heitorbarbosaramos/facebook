@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:interface_facebook/uteis/app_controller.dart';
 import 'package:interface_facebook/uteis/paleta_cores.dart';
 
 class NavegacaoBottomBar extends StatelessWidget {
