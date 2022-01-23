@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:interface_facebook/componentes/controle_tema_dark_light.dart';
+import 'package:interface_facebook/componentes/marca_texto.dart';
 import 'package:interface_facebook/uteis/app_controller.dart';
 import 'package:interface_facebook/uteis/paleta_cores.dart';
-import 'package:line_icons/line_icons.dart';
-
-import 'botao_circulo.dart';
+import 'package:interface_facebook/uteis/responsivo.dart';
 
 class SliverAppBarPersonalizado extends StatefulWidget {
   const SliverAppBarPersonalizado({Key? key}) : super(key: key);
@@ -19,29 +19,13 @@ class _SliverAppBarPersonalizadoState extends State<SliverAppBarPersonalizado> {
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
-      backgroundColor: AppController.instance.isDartTheme ? PaletasCores.corThemeDark : PaletasCores.corThemeLight,
+      // backgroundColor: AppController.instance.isDartTheme ? PaletasCores.corThemeDark : PaletasCores.corThemeLight,
       floating: true,
       centerTitle: false,
-      title: Text("facebook",
-        style: TextStyle(
-            color: PaletasCores.azulFacebook,
-            fontWeight: FontWeight.bold,
-            fontSize: 28,
-            letterSpacing: -1.2
-        ),
-      ),
+      title: Responsivo.isMobile(context) ? MarcaTexto() : null,
       actions: [
-        Row(children: [
-          Icon(AppController.instance.isDartTheme? Icons.lightbulb_outline : Icons.tungsten_outlined, color: AppController.instance.isDartTheme ?  Colors.white : Colors.black, size: 36,),
-          Switch(value: AppController.instance.isDartTheme, onChanged: (value){
-            setState(() {
-              //isDartTheme = value;
-            });
-            AppController.instance.alteraLightDartTema();
-          })
-        ],),
-        BotaoCirculo(icone: LineIcons.search, tamanhoIcone: 30, onPressed: (){},),
-        BotaoCirculo(icone: LineIcons.facebookMessenger, tamanhoIcone: 30, onPressed: (){},),
+        ControleTemaDarkLight(),
+
       ],
     );
   }

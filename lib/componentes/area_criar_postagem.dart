@@ -16,7 +16,7 @@ class AreaCriarPostagem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(color: AppController.instance.isDartTheme ? PaletasCores.corThemeDark : PaletasCores.corThemeLight),
+      //decoration: BoxDecoration(color: AppController.instance.isDartTheme ? PaletasCores.corThemeDark : PaletasCores.corThemeLight),
       padding: EdgeInsets.fromLTRB(12, 8, 12, 8),
       child: Column(
         children: [

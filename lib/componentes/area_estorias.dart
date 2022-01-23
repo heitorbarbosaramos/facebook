@@ -21,7 +21,7 @@ class AreaEstorias extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 200,
-      color: AppController.instance.isDartTheme ? PaletasCores.corThemeDark : PaletasCores.corThemeLight,
+      //color: AppController.instance.isDartTheme ? PaletasCores.corThemeDark : PaletasCores.corThemeLight,
       child: ListView.builder(
           padding: EdgeInsets.symmetric(vertical: 8, horizontal: 10),
           scrollDirection: Axis.horizontal,

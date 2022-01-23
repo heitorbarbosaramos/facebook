@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:interface_facebook/componentes/bottom_navigator_bar.dart';
-import 'package:interface_facebook/telas/Home.dart';
-import 'package:interface_facebook/telas/flag.dart';
-import 'package:interface_facebook/telas/marketing_place.dart';
-import 'package:interface_facebook/telas/meu_perfil.dart';
-import 'package:interface_facebook/telas/ondemand_video.dart';
-import 'package:interface_facebook/telas/sinal.dart';
-import 'package:line_icons/line_icons.dart';
+import 'package:interface_facebook/componentes/lista_menu.dart';
+import 'package:interface_facebook/componentes/navegacao_tela_maior_800_top.dart';
+import 'package:interface_facebook/uteis/responsivo.dart';
 
 class NavegacaoAbas extends StatefulWidget {
   const NavegacaoAbas({Key? key}) : super(key: key);
@@ -17,42 +13,22 @@ class NavegacaoAbas extends StatefulWidget {
 
 class _NavegacaoAbasState extends State<NavegacaoAbas> {
 
-  final List<Widget> _telas = [
-    Home(),
-    OndeMandeVideo(),
-    MarketinPlace(),
-    Bandeira(),
-    Sinos(),
-    MeuPerfil(),
-  ];
-
-  int indiceAbaSelecionada = 0;
-
-  List<IconData> _icones = [
-    Icons.home,
-    Icons.ondemand_video,
-    Icons.storefront_outlined,
-    Icons.flag_outlined,
-    LineIcons.bell,
-    Icons.person
-  ];
-
-
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-        length: _icones.length,
+        length: ListaMenu.icones.length,
         child: Scaffold(
+          appBar: Responsivo.isMobile(context) ? null : PreferredSize(child: NavegacaoTelaMaior800(), preferredSize: Size(MediaQuery.of(context).size.width, 100)),
           body: TabBarView(
             physics: NeverScrollableScrollPhysics(),
-            children: _telas,
+            children: ListaMenu.telas,
           ),
-          bottomNavigationBar: NavegacaoBottomBar(
-            icones: _icones,
-            indiceAbaSelecionada: indiceAbaSelecionada,
+          bottomNavigationBar: !Responsivo.isMobile(context) ? null : NavegacaoBottomBar(
+            icones: ListaMenu.icones,
+            indiceAbaSelecionada: ListaMenu.indiceAbaSelecionada,
             onTap: (indice){
               setState(() {
-                indiceAbaSelecionada = indice;
+                ListaMenu.indiceAbaSelecionada = indice;
               });
             },
           ),
