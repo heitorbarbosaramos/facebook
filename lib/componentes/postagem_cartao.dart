@@ -19,7 +19,7 @@ class CartaoPostagem extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 8, horizontal: 8),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
 
           //CABEÇALHO
@@ -50,7 +50,7 @@ class CartaoPostagem extends StatelessWidget {
           
           //IMAGEM DE POSTAGEM
           SizedBox(height: 10,),
-          CachedNetworkImage(imageUrl: postagem.urlImagem, fit: BoxFit.cover,),
+          CachedNetworkImage(imageUrl: postagem.urlImagem, fit: BoxFit.cover, alignment: Alignment.center,),
           SizedBox(height: 10,),
 
 
