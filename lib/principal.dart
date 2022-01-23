@@ -1,8 +1,7 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
-import 'package:interface_facebook/telas/Home.dart';
+import 'package:interface_facebook/navegacao_abas.dart';
 import 'package:interface_facebook/uteis/app_controller.dart';
-import 'package:interface_facebook/uteis/paleta_cores.dart';
 
 class Principal extends StatefulWidget {
   const Principal({Key? key}) : super(key: key);
@@ -28,7 +27,7 @@ class _PrincipalState extends State<Principal> {
               brightness: AppController.instance.isDartTheme? Brightness.dark : Brightness.light,
             ),
 
-          home: Home(),
+          home: NavegacaoAbas(),
         );
       }
     );
