@@ -8,14 +8,14 @@ import 'package:interface_facebook/dados/dados.dart';
 import 'package:interface_facebook/uteis/app_controller.dart';
 import 'package:interface_facebook/uteis/paleta_cores.dart';
 
-class NavegacaoTelaMaior800 extends StatefulWidget {
-  const NavegacaoTelaMaior800({Key? key}) : super(key: key);
+class NavegacaoTelaMaior800eMenor1200 extends StatefulWidget {
+  const NavegacaoTelaMaior800eMenor1200({Key? key}) : super(key: key);
 
   @override
-  _NavegacaoTelaMaior800State createState() => _NavegacaoTelaMaior800State();
+  _NavegacaoTelaMaior800eMenor1200 createState() => _NavegacaoTelaMaior800eMenor1200();
 }
 
-class _NavegacaoTelaMaior800State extends State<NavegacaoTelaMaior800> {
+class _NavegacaoTelaMaior800eMenor1200 extends State<NavegacaoTelaMaior800eMenor1200> {
   @override
   Widget build(BuildContext context) {
     return Container(

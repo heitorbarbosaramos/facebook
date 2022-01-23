@@ -3,8 +3,6 @@ import 'package:interface_facebook/componentes/area_estoria_cartao.dart';
 import 'package:interface_facebook/dados/dados.dart';
 import 'package:interface_facebook/modelos/estoria.dart';
 import 'package:interface_facebook/modelos/usuarios.dart';
-import 'package:interface_facebook/uteis/app_controller.dart';
-import 'package:interface_facebook/uteis/paleta_cores.dart';
 
 class AreaEstorias extends StatelessWidget {
 

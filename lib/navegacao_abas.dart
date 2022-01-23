@@ -18,7 +18,7 @@ class _NavegacaoAbasState extends State<NavegacaoAbas> {
     return DefaultTabController(
         length: ListaMenu.icones.length,
         child: Scaffold(
-          appBar: Responsivo.isMobile(context) ? null : PreferredSize(child: NavegacaoTelaMaior800(), preferredSize: Size(MediaQuery.of(context).size.width, 100)),
+          appBar: Responsivo.isMobile(context) ? null : PreferredSize(child: NavegacaoTelaMaior800eMenor1200(), preferredSize: Size(MediaQuery.of(context).size.width, 100)),
           body: TabBarView(
             physics: NeverScrollableScrollPhysics(),
             children: ListaMenu.telas,
