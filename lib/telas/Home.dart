@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:interface_facebook/componentes/area_criar_postagem.dart';
 import 'package:interface_facebook/componentes/area_estorias.dart';
+import 'package:interface_facebook/componentes/lista_contatos.dart';
+import 'package:interface_facebook/componentes/menu_lateral_desktop.dart';
 import 'package:interface_facebook/componentes/postagem.dart';
 import 'package:interface_facebook/componentes/sliverAppBar.dart';
 import 'package:interface_facebook/dados/dados.dart';
@@ -71,16 +73,25 @@ class HomeDeskTop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
-      slivers: [
-        //SliverAppBarPersonalizado(),
-        SliverToBoxAdapter(child: Text("HomeDesktop"),),
-        SliverToBoxAdapter(
-          child: AreaCriarPostagem(usuarioLogado: usuarioAtual,),
+    return Row(
+      children: [
+        Flexible( flex: 1,child: Padding(padding: EdgeInsets.all(12), child:  MenuLateralDesktop(),)),
+        Flexible(
+          flex: 2,
+            child: CustomScrollView(
+              slivers: [
+                //SliverAppBarPersonalizado(),
+                SliverToBoxAdapter(child: Text("HomeDesktop"),),
+                SliverToBoxAdapter(
+                  child: AreaCriarPostagem(usuarioLogado: usuarioAtual,),
+                ),
+                SliverPadding(padding: EdgeInsets.fromLTRB(0, 10, 0, 5)),
+                SliverToBoxAdapter(child: AreaEstorias(usuario: usuarioAtual, estorias: estorias,)),
+                Postagens(),
+              ],
+            )
         ),
-        SliverPadding(padding: EdgeInsets.fromLTRB(0, 10, 0, 5)),
-        SliverToBoxAdapter(child: AreaEstorias(usuario: usuarioAtual, estorias: estorias,)),
-        Postagens(),
+        Flexible(flex: 1, child: Padding(padding: EdgeInsets.all(12), child: ListaDeContatos(contatos: usuariosOnline,),)),
       ],
     );
   }
